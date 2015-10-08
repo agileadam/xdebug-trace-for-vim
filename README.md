@@ -2,9 +2,11 @@
 
 1. Copy the files to their respective directories in your ~/.vim directory.
 1. Place this code (change as needed) in ~/.vim/filetype.vim or ~/.vimrc:
-	augroup filetypedetect
-	au BufNewFile,BufRead *.xt  setf xt
-	augroup END
+```
+augroup filetypedetect
+au BufNewFile,BufRead *.xt  setf xt
+augroup END
+```
 
 ## Notes
 

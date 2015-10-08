@@ -11,7 +11,7 @@ augroup END
 ## Notes
 
 ### Newlines
-The folding doesn't work well if you include params in your trace output and the results contain newlines.
+The folding doesn't work well if you include params  (e.g., `xdebug.collect_params=4`) in your trace output and the results contain newlines.
 
 You can remove the newlines with something like this: `perl -00pe 's/\n(?=[0-9A-Za-z])/ /g' xdebug_trace_with_params.xt > result.xt`
 

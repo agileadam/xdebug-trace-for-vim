@@ -1,14 +1,14 @@
 function! XdebugTracerFolds()
-	" Top level has 21 spaces between digit and '->' (so 24 total characters)
-	" Each level deeper is 2 extra characters (spaces)
-	" Subtract 23 from the total count to 'start' at level 1
-	let this_indent = strchars(matchstr(getline(v:lnum), '\d *->')) - 23
+    " Top level has 21 spaces between digit and '->'
+    " Each level deeper is 2 extra characters (spaces)
+    " Subtract 20 from the total space count to 'start' at level 1
+    let this_indent = strchars(matchstr(getline(v:lnum), ' \+[0-9.]\+ \+\d\+\zs *')) - 20
 
-	if this_indent == -23
-		return 0
-	endif
+    if this_indent == -20
+        return 0
+    endif
 
-	let next_indent = strchars(matchstr(getline(v:lnum + 1), '\d *->')) - 23
+    let next_indent = strchars(matchstr(getline(v:lnum + 1), ' \+[0-9.]\+ \+\d\+\zs *')) - 20
 
     if next_indent <= this_indent
         return this_indent

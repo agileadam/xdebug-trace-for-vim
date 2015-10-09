@@ -20,3 +20,5 @@ It will take some time to open an xt file and process the folds. Keep your files
 
 ## Credits
 Syntax file from https://github.com/xdebug/xdebug.org/blob/master/html/files/xt.vim
+
+Thanks to _turlutton_ on `#vim` for helping improve the regex

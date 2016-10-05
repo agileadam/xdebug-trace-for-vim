@@ -29,6 +29,9 @@ If that doesn't work, you could try using `perl`, `sed`, `tr` or others. The goa
 ### Performance
 It will take some time to open an xt file and process the folds. Keep your files as small as possible (by using `xdebug_start_trace()` and `xdebug_stop_trace()`, for example, to focus on specific function calls).
 
+### Folding Behavior
+If you open a fold (`zo`) and nothing seems to happen, keep opening (`zo zo zo zo`) until it eventually opens. I'll have to debug this someday.
+
 ## TODO
 Automatically detect where to start folding level instead of using the `g:xt_extra_spaces` variable
 
